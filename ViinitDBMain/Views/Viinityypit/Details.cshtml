@@ -1,0 +1,23 @@
+﻿@model ViinitDBMain.Models.Viinityypit
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="viinityypit-lisatiedot-otsikko">Lisätiedot</h1>
+<div>
+    <h4></h4>
+    <hr class="viinityypit-lisatiedot-viiva"/>
+    <dl class="row">
+        <dt class = "viinityypit-lisatiedot-viinityyppiotsikko">
+            @Html.DisplayNameFor(model => model.Viinityyppi)
+        </dt>
+        <dd class = "viinityypit-lisatiedot-punaviiniotsikko">
+            @Html.DisplayFor(model => model.Viinityyppi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TyyppiId" class="viinityypit-lisatiedot-muokkaa-painike">Muokkaa</a> |
+    <a asp-action="Index" class="viinityypit-lisatiedot-takaisinlistaan-painike">Takaisin listaan</a>
+</div>

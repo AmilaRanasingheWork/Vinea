@@ -1,0 +1,53 @@
+﻿@model ViinitDBMain.Models.Viinit
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="viinit-poista-sivun-otsikko">Poista<br />
+    Haluatko varmasti poistaa?
+</h1>
+
+<h3></h3>
+<div>
+    <h4></h4>
+    <hr class="viinit-poista-sivun-viiva"/>
+    <dl class="viinit-poista-sivun-tiedot">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nimi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nimi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vuosi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vuosi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kommentit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kommentit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hinta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hinta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tyyppi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tyyppi.TyyppiId)
+        </dd>
+    </dl>
+    
+    <form asp-action="delete">
+        <input type="hidden" asp-for="ViiniId" />
+        <input type="submit" value="Poista" class="btn btn-danger"/> |
+        <a asp-action="Index" class="viinitsivun-poistasivun-takaisinlistaan-painike">Takaisin listaan</a>
+    </form>
+</div>

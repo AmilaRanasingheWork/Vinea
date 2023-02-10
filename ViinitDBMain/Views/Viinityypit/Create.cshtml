@@ -1,0 +1,31 @@
+﻿@model ViinitDBMain.Models.Viinityypit
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="luoviinityyppeja-sivun-otsikko">Luo viinityyppejä</h1>
+<hr class="luoviinityyppeja-sivun-viiva"/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Viinityyppi" class="luoviinityyppeja-sivun-viinityyppi-otsikko"></label>
+                <input asp-for="Viinityyppi" class="luoviinityyppejaa-sivun-lomake" />
+                <span asp-validation-for="Viinityyppi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Luo" class="luoviinityyppeja-sivun-luo-painike" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="luoviinityyppeja-sivun-takaisinlistaan-painike" asp-action="Index">Takaisin listaan</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

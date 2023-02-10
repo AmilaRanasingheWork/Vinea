@@ -1,0 +1,33 @@
+﻿@model ViinitDBMain.Models.Viinityypit
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h1 class="viinityypit-otsikko">Muokkaa</h1>
+<hr class="viinityypit-viiva"/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TyyppiId" />
+            <div class="form-group">
+                <label asp-for="Viinityyppi" class="viinityypit-viinityyppi-otsikko"></label>
+                <input asp-for="Viinityyppi" class="viinityypit-viinityyppi-lomake" />
+                <span asp-validation-for="Viinityyppi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tallenna" class="viinityypit-tallenna-painike" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="viinityypit-takaisinlistaan-painike">Takaisin listaan</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

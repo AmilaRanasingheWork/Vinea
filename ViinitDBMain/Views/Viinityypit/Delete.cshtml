@@ -1,0 +1,27 @@
+﻿    @model ViinitDBMain.Models.Viinityypit
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="viinityypit-poista-otsikko">Poista</h1>
+
+<h3 class="viinityypit-oletkovarmapoistamisesta-otsikko"></h3>
+<div>
+    <h4></h4>
+    <hr class="viinityypit-poistasivun-viiva"/>
+    <dl class="row">
+        <dt class="viinityypit-viinityyppi-otsikko2">
+            @Html.DisplayNameFor(model => model.Viinityyppi)
+        </dt>
+        <dd class="viinityypit-punaviini-otsikko">
+            @Html.DisplayFor(model => model.Viinityyppi)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TyyppiId" />
+        <input type="submit" value="Poista" class="viinityypit-poistasivun-painike"/> |
+        <a asp-action="Index" class="viinityypit-poistasivuntakaisinlistaan-painike">Takaisin Listaan</a>
+    </form>
+</div>

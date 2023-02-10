@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ViinitDBMain.Models.Viinityypit>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="viinityypit-teksti">Viinityypit</h1>
+
+<p>
+    <button class="viinityypit-luouusi-painike">
+    <a asp-action="Create" class="viinityypit-luouusi-teksti">Luo uusi</a>
+    </button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="viinityypit-taulukko-otsikko">
+                @Html.DisplayNameFor(model => model.Viinityyppi)
+            </th>
+            <th></th>
+        </tr>   
+    </thead>
+    <tbody class="viinityypit">
+@foreach (var item in Model) {
+        <tr>
+            <td class="viinityypit-viinit">
+                @Html.DisplayFor(modelItem => item.Viinityyppi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TyyppiId" class="viinityypit-muokkaa-painike">Muokkaa</a> |
+                <a asp-action="Details" asp-route-id="@item.TyyppiId" class="viinityypit-yksityiskohdat-painike">Lisätiedot</a> |
+                <a asp-action="Delete" asp-route-id="@item.TyyppiId" class="viinityypit-poista-painike">Poista</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

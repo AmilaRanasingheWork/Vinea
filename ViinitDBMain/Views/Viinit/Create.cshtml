@@ -1,0 +1,52 @@
+﻿@model ViinitDBMain.Models.Viinit
+
+@{
+    ViewData["Title"] = "Luo";
+}
+
+<h1 class="viinit-luo-sivun-otsikko">Luo</h1>
+
+<h4></h4>
+<hr class="viinit-luo-sivun-viiva"/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nimi" class="viinit-luo-sivun-otsikot"></label>
+                <input asp-for="Nimi" class="viinit-luo-sivun-lomakkeet" />
+                <span asp-validation-for="Nimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vuosi" class="viinit-luo-sivun-otsikot"></label>
+                <input asp-for="Vuosi" class="viinit-luo-sivun-lomakkeet" />
+                <span asp-validation-for="Vuosi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="viinit-luo-sivun-otsikot"> Viinityyppi </label>
+                <select asp-for="TyyppiId" class="viinit-luo-sivun-lomakkeet" asp-items="ViewBag.TyyppiId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kommentit" class="viinit-luo-sivun-otsikot"></label>
+                <input asp-for="Kommentit" class="viinit-luo-sivun-lomakkeet" />
+                <span asp-validation-for="Kommentit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hinta" class="viinit-luo-sivun-otsikot"></label>
+                <input asp-for="Hinta" class="viinit-luo-sivun-lomakkeet" />
+                <span asp-validation-for="Hinta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Luo" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="viinit-luo-takaisinlistaan-painike" asp-action="Index">Takaisin listaan</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

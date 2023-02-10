@@ -1,0 +1,1532 @@
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html 
+  {
+    font-size: 16px;
+  }
+}
+
+html 
+{
+  position: relative;
+  min-height: 100%;
+}
+
+
+body 
+{
+    margin-bottom: 60px;
+    background-color: navajowhite;
+}
+
+/* "Etusivu"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.kuva 
+{
+    object-fit: cover;
+    height: 500px;
+    width: 1000px;
+    border-radius: 100px;
+    border: 5px solid burlywood;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.teksti-1 
+{
+    font-family: 'Red Hat Mono';
+    font-weight: 500;
+    color: brown;
+    background-color: burlywood;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.teksti-2 
+{
+    font-family: 'Red Hat Mono';
+    color: burlywood;
+    font-weight: 500;
+    background-color: brown;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.etusivu-alatunniste 
+{
+    border-bottom: 5px solid brown;
+    border-top: 5px solid brown;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    font-family: 'Red Hat Mono';
+    font-weight: 600;
+    color: brown;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.etusivu-tietosuojak‰ytˆntˆ
+{
+    text-decoration: none;
+}
+
+.sosiaalinenmedia-sailio 
+{
+    /* border: 2px red solid;*/
+    width: 150px;
+    height: 30px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    display: flex;
+    margin-left: 70px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: brown;
+}
+
+.twitter-sailio 
+{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: navajowhite;
+    border-radius: 50%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    transition: background-color 1s, border 1s;
+    border: brown solid 1px;
+}
+
+.twitter-sailio:hover
+{
+    background-color: brown;
+    border: burlywood solid 1px;
+}
+
+.fa-twitter 
+{
+    cursor: pointer;
+    transition: color 1s;
+    color: brown;
+}
+
+.fa-twitter:hover
+{
+    color: burlywood;
+}
+
+.instagram-sailio 
+{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: navajowhite;
+    margin-left: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    transition: background-color 1s, border 1s;
+    border: brown solid 1px;
+}
+
+.instagram-sailio:hover
+{
+    background-color: brown;
+    border: burlywood solid 1px;
+}
+
+.fa-instagram
+{
+    cursor: pointer;
+    transition: color 1s;
+    font-weight:600;
+}
+
+.fa-instagram:hover
+{
+    color: burlywood;
+}
+
+.facebook-sailio 
+{
+    /*  border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: navajowhite;
+    margin-left: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    transition: background-color 1s, border 1s;
+    border: brown solid 1px;
+}
+
+.facebook-sailio:hover
+{
+    background-color: brown;
+    border: burlywood solid 1px;
+    cursor: pointer;
+}
+
+.fa-facebook 
+{
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.fa-facebook:hover
+{
+    color: burlywood;
+}
+
+.linkedin-sailio 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: navajowhite;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    transition: background-color 1s, border 1s;
+    border: brown solid 1px;
+}
+
+.linkedin-sailio:hover
+{
+    cursor: pointer;
+    background-color: brown;
+    border: burlywood solid 1px;
+}
+
+.fa-linkedin 
+{
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.fa-linkedin:hover
+{
+    color: burlywood;
+}
+
+.etusivu-hae-lomake 
+{
+    margin-top: px;
+    margin-bottom: px;
+    color: burlywood;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    background-color: brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.etusivu-laheta-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    margin-left: 10px;
+}
+
+.etusivu-laheta-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+#tervehdyskentta 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+/* Etusivu sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinit sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+.viinit-sivun-otsikko {
+    font-family: 'Red Hat Mono';
+    color: burlywood;
+    background-color: brown;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    border: 5px solid burlywood;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.Luo-uusi-button 
+{
+    background-color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 0.30s, color 0.30s, border 0.30s;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    border: 5px solid burlywood;
+    margin-bottom: 20px;
+}
+
+.Luo-uusi-button:hover 
+{
+    background-color: burlywood;
+    border: 5px solid brown;
+}
+
+.Luo-uusi-teksti 
+{
+    color: burlywood;
+    transition: color 0.30s;
+    text-decoration: none;
+    font-family: 'Red Hat Mono';
+}
+
+.Luo-uusi-teksti:hover
+{
+    color:brown;
+}
+
+.viinitsivun-taulukko-otsikot
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+
+.viinitsivun-taulukko-data 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    font-weight: 600;
+    border: 2px solid brown;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.viinitsivun-toiminnot 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.30s;
+}
+
+.viinitsivun-toiminnot:hover
+{
+    color: burlywood;
+}
+
+/* Viinit sivun ulkoasun  muokkaaminen p‰‰ttyy t‰h‰n */
+
+/*Viinit sivun "Luo"-sivun ulkoasun muokkaaminen alkaa t‰st‰*/
+
+.viinit-luo-sivun-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.viinit-luo-sivun-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+.viinit-luo-sivun-otsikot 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    display: block;
+    font-weight: 600;
+}
+
+.viinit-luo-sivun-lomakkeet 
+{
+    font-family: 'Red Hat Mono';
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: burlywood;
+    border: 1px solid brown;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    background-color: brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-primary 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+.viinit-luo-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+}
+
+.viinit-luo-takaisinlistaan-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+/*Viinit sivun "Luo"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n*/
+
+/* Viinit sivun "Muokkaa"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+.viinit-muokkaa-otsikko {
+    font-family: 'Red Hat Mono';
+    color: brown;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.viinit-muokkaa-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+.viinit-muokkaa-sivun-otsikot 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    display: block;
+    font-weight: 600;
+}
+
+.viinit-muokkaa-sivun-lomakkeet
+{
+    font-family: 'Red Hat Mono';
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: burlywood;
+    border: 1px solid brown;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    background-color: brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.viinit-muokkaa-sivun-kommentit-lomake 
+{
+    font-family: 'Red Hat Mono';
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: burlywood;
+    border: 1px solid brown;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    background-color: brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 20px;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.viinit-muokkaa-sivun-tallenna-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+}
+
+.viinit-muokkaa-sivun-tallenna-painike:hover
+{
+    color: burlywood;
+    background-color: brown;
+}
+
+.viinit-muokkaa-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    
+}
+
+.viinit-muokkaa-takaisinlistaan-painike:hover
+{
+    color: burlywood;
+    background-color: brown;
+}
+
+
+/* Viinit sivun "Muokkaa"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinit sivun "Lis‰tiedot"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.viinit-lisatiedot-sivun-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.viinit-lisatiedot-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+.viinit-lisatiedot 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    font-weight: 600;
+}
+
+.viinit-lisatiedot-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    margin-left: 10px;
+}
+
+.viinit-lisatiedot-takaisinlistaan-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+.viinit-lisatiedot-muokkaa-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    margin-right: 10px;
+}
+
+.viinit-lisatiedot-muokkaa-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+/* Viinit sivun "Lis‰tiedot"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinit sivun "Poista"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.viinit-poista-sivun-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.viinit-poista-sivun-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+.viinit-poista-sivun-tiedot 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    font-weight: 600;
+}
+
+.btn-danger /* viinit sivun "poista"-sivun painike*/
+
+{
+    background-color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s, border 1s;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    border: 5px solid burlywood;
+    color: burlywood;
+    margin-right: 10px;
+}
+
+.btn-danger:hover
+{
+    background-color: burlywood;
+    color: brown;
+    border: 5px solid brown;
+}
+
+.viinitsivun-poistasivun-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    margin-left: 10px;
+}
+
+.viinitsivun-poistasivun-takaisinlistaan-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+/* Viinit sivun "Poista"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinitypit-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.viinityypit-teksti 
+{
+    font-family: 'Red Hat Mono';
+    color: burlywood;
+    background-color: brown;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+    border: 5px solid burlywood;
+}
+
+.viinityypit-luouusi-painike 
+{
+    background-color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s, border 1s;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    border: 5px solid burlywood;
+}
+        
+.viinityypit-luouusi-painike:hover
+{
+    background-color:burlywood;
+    color:brown;
+    border: 5px solid brown;
+}
+
+.viinityypit-luouusi-teksti
+{
+    text-decoration:none;
+    color:burlywood;
+    transition: color 1s;
+    font-family:'Red Hat Mono';
+
+}
+
+.viinityypit-luouusi-teksti:hover
+{
+    color:brown;
+}
+
+.viinityypit-taulukko-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+
+.viinityypit-muokkaa-painike 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.30s;
+}
+
+.viinityypit-muokkaa-painike:hover
+{
+    color: burlywood;
+}
+
+.viinityypit-yksityiskohdat-painike 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.30s;
+}
+
+.viinityypit-yksityiskohdat-painike:hover 
+{
+     color: burlywood;
+}
+
+.viinityypit-poista-painike 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.30s;
+}
+
+.viinityypit-poista-painike:hover 
+{
+    color: burlywood;
+}
+
+.viinityypit-viinit 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    font-weight: 600;
+}
+
+.viinityypit
+{
+    border: 2px solid brown;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+/* Viinitypit-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinityypit-sivun "luo viiniteeppj‰"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.luoviinityyppeja-sivun-otsikko 
+{
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-family: 'Red Hat Mono';
+    color: brown;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+}
+
+.luoviinityyppeja-sivun-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+.luoviinityyppeja-sivun-viinityyppi-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.luoviinityyppejaa-sivun-lomake 
+{
+    border-radius: 10px;
+    background-color: brown;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+    border: 5px solid burlywood;
+    color: burlywood;
+    font-family: 'Red Hat Mono';
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.luoviinityyppeja-sivun-luo-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+}
+
+.luoviinityyppeja-sivun-luo-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+.luoviinityyppeja-sivun-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    color: brown;
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgb(0 0 0);
+}
+
+.luoviinityyppeja-sivun-takaisinlistaan-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+/* Viinityypit-sivun "luo viinityyppej‰"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinitypit-sivun "muokkaa"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.viinityypit-otsikko 
+{
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-family: 'Red Hat Mono';
+    color: brown;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.viinityypit-viiva
+{
+    color:darkred;
+    border: 2px solid;
+}
+
+.viinityypit-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    color: brown;
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.viinityypit-takaisinlistaan-painike:hover
+{
+    color:burlywood;
+    background-color:brown;
+}
+
+.viinityypit-tallenna-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.viinityypit-tallenna-painike:hover 
+{
+    color: burlywood;
+    background-color: brown;
+}
+
+.viinityypit-viinityyppi-teksti
+{
+    color:brown;
+    font-family: 'Red Hat Mono';
+}
+
+.viinityypit-viinityyppi-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    display:block;
+    font-weight:600;
+}
+
+.viinityypit-viinityyppi-lomake 
+{
+    font-family: 'Red Hat Mono';
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: burlywood;
+    border: 1px solid brown;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    background-color:brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 5px solid burlywood;
+    border-radius: 10px;
+    font-weight:600;
+}
+
+/* Viinitypit-sivun "muokkaa"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinitypit-sivun "lisatiedot"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.viinityypit-lisatiedot-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.viinityypit-lisatiedot-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+.viinityypit-lisatiedot-viinityyppiotsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+
+.viinityypit-lisatiedot-punaviiniotsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+
+.viinityypit-lisatiedot-muokkaa-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    margin-right: 10px;
+}
+
+
+.viinityypit-lisatiedot-muokkaa-painike:hover
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+
+.viinityypit-lisatiedot-takaisinlistaan-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    margin-left: 10px;
+}
+
+.viinityypit-lisatiedot-takaisinlistaan-painike:hover 
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+/* Viinitypit-sivun "lisatiedot"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Viinitypit-sivun "poista"-sivun ulkoasun muokkaaminen alkaa t‰st‰ */
+
+.viinityypit-poista-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    background-color: burlywood;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.viinityypit-oletkovarmapoistamisesta-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+    margin-top: 20px
+}
+
+.viinityypit-poistasivun-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    margin-right: 10px;
+}
+
+.viinityypit-poistasivun-painike:hover 
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+.viinityypit-poistasivuntakaisinlistaan-painike 
+{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s;
+    font-family: 'Red Hat Mono';
+    text-decoration: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    margin-left: 10px
+}
+
+.viinityypit-poistasivuntakaisinlistaan-painike:hover 
+{
+    background-color: brown;
+    color: burlywood;
+}
+
+.viinityypit-viinityyppi-otsikko2 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+
+.viinityypit-punaviini-otsikko 
+{
+    font-family: 'Red Hat Mono';
+    color: brown;
+}
+
+.viinityypit-poistasivun-viiva 
+{
+    color: darkred;
+    border: 2px solid;
+}
+
+/* Viinitypit-sivun "poista"-sivun ulkoasun muokkaaminen p‰‰ttyy t‰h‰n */
+
+/* Navigointipaneelin ulkoasun muokkaus alkaa t‰st‰ */
+
+.navbar-brand /* navigointipaneeli-etusivu */ 
+{
+    font-family: 'Red Hat Mono';
+    background-color: brown;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: burlywood;
+    transition: background-color 1s, color 1s, border 1s;
+    border: 5px solid burlywood;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.navbar-brand:hover
+{
+    background-color: burlywood;
+    color:brown;
+    border: 5px solid brown;
+}
+
+.navigointipaneeli-viinit 
+{
+    font-family: 'Red Hat Mono';
+    background-color: brown;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+    color: burlywood;
+    transition: background-color 1s, color 1s, border 1s;
+    text-decoration: none;
+    border: 5px solid burlywood;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.navigointipaneeli-viinit:hover 
+{
+    background-color: burlywood;
+    color: brown;
+    border: 5px solid brown;
+}
+
+
+.navigointipaneeli-viinityypit 
+{
+    font-family: 'Red Hat Mono';
+    background-color: brown;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+    color: burlywood;
+    transition: background-color 1s, color 1s, border 1s;
+    text-decoration: none;
+    color: burlywood;
+    margin-left: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+    border: 5px solid burlywood;
+}
+
+.navigointipaneeli-viinityypit:hover 
+{
+    background-color: burlywood;
+    color: brown;
+    border: 5px solid brown;
+}
+
+.navigointipaneeli-viinit-otsikko
+{
+    color:burlywood;
+    text-decoration:none;
+}
+
+.navigointipaneeli-viinit-otsikko:hover
+{
+    color:brown;
+}
+
+
+.navigointipaneeli-viinityypit-otsikko 
+{
+    color: burlywood;
+    text-decoration: none;
+}
+
+.navigointipaneeli-viinityypit-otsikko:hover 
+{
+    color: brown;
+}
+
+.container-fluid /* navigointipaneeli */ 
+{
+    background-color: navajowhite;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 5px solid brown;
+    border-bottom: 5px solid brown;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+.navbar navbar-expand-sm navbar-toggleable-sm bg-white border-bottom box-shadow mb-3 /* navigointipaneelin-reunukset */
+{
+    color: brown;
+}
+
+
+/* Navigointipaneelin ulkoasun muokkaus p‰‰ttyy t‰h‰n */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

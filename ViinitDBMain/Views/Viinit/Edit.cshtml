@@ -1,0 +1,54 @@
+﻿@model ViinitDBMain.Models.Viinit
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="viinit-muokkaa-otsikko">Muokkaa</h1>
+
+<h4></h4>
+<hr class="viinit-muokkaa-viiva"/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ViiniId" />
+            <div class="form-group">
+                <label asp-for="Nimi" class="viinit-muokkaa-sivun-otsikot"></label>
+                <input asp-for="Nimi" class="viinit-muokkaa-sivun-lomakkeet" />
+                <span asp-validation-for="Nimi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vuosi" class="viinit-muokkaa-sivun-otsikot"></label>
+                <input asp-for="Vuosi" class="viinit-muokkaa-sivun-lomakkeet" />
+                <span asp-validation-for="Vuosi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="viinit-muokkaa-sivun-otsikot"> Viinityyppi </label>
+                <select asp-for="TyyppiId" class="viinit-muokkaa-sivun-lomakkeet" asp-items="ViewBag.TyyppiId"></select>
+                <span asp-validation-for="TyyppiId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kommentit" class="viinit-muokkaa-sivun-otsikot"></label>
+                <input asp-for="Kommentit" class="viinit-muokkaa-sivun-kommentit-lomake" />
+                <span asp-validation-for="Kommentit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hinta" class="viinit-muokkaa-sivun-otsikot"></label>
+                <input asp-for="Hinta" class="viinit-muokkaa-sivun-lomakkeet" />
+                <span asp-validation-for="Hinta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tallenna" class="viinit-muokkaa-sivun-tallenna-painike" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="viinit-muokkaa-takaisinlistaan-painike" asp-action="Index">Takaisin listaan</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

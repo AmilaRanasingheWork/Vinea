@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ViinitDBMain.Models.Viinit>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="viinit-sivun-otsikko">Viinit</h1>
+<button class="Luo-uusi-button">
+    <a class="Luo-uusi-teksti" asp-action="Create">Luo uusi</a>
+</button>
+
+<table class="table">
+    <thead>
+        <tr class="viinitsivun-taulukko-otsikot">
+            <th>
+                @Html.DisplayNameFor(model => model.Nimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vuosi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kommentit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hinta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tyyppi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="viinitsivun-taulukko-data">
+            <td>
+                @Html.DisplayFor(modelItem => item.Nimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vuosi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kommentit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hinta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tyyppi.Viinityyppi)
+            </td>
+                <td class="viinitsivun-toiminnot">
+                <a class="viinitsivun-toiminnot" asp-action="Edit" asp-route-id="@item.ViiniId">Muokkaa</a> |
+                <a class="viinitsivun-toiminnot" asp-action="Details" asp-route-id="@item.ViiniId">Lisätiedot</a> |
+                    <a class="viinitsivun-toiminnot" asp-action="Delete" asp-route-id="@item.ViiniId">Poista</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

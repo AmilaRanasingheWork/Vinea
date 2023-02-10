@@ -1,0 +1,48 @@
+﻿@model ViinitDBMain.Models.Viinit
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="viinit-lisatiedot-sivun-otsikko">Lisätiedot</h1>
+
+<div>
+    <h4></h4>
+    <hr class="viinit-lisatiedot-viiva"/>
+    <dl class="viinit-lisatiedot">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nimi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nimi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vuosi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vuosi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kommentit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kommentit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hinta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hinta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tyyppi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tyyppi.TyyppiId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="viinit-lisatiedot-muokkaa-painike" asp-action="Edit" asp-route-id="@Model?.ViiniId">Muokkaa</a> |
+    <a class="viinit-lisatiedot-takaisinlistaan-painike" asp-action="Index">Takaisin listaan</a>
+</div>
