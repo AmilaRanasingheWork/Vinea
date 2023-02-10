@@ -11,13 +11,13 @@ namespace ViinitDBMain.Controllers
 {
     public class ViinitController : Controller
     {
-        private readonly ViinitDBContext _context = new ViinitDBContext();
+        private readonly ViinitDBContext _context = new ViinitDBContext(); 
 
         // GET: Viinit
         public async Task<IActionResult> Index()
         {
-            var viinitDBContext = _context.Viinits.Include(v => v.Tyyppi);
-            return View(await viinitDBContext.ToListAsync());
+            var viinit = _context.Viinits.Include(v => v.Tyyppi);
+            return View(await viinit.ToListAsync());
         }
 
         // Haku
@@ -49,26 +49,26 @@ namespace ViinitDBMain.Controllers
 
         // GET: Viinit/Create
         public IActionResult Create()
-        {
+        {   // Luodaan dropdownia varten SelectList.
             ViewData["TyyppiId"] = new SelectList(_context.Viinityypits, "TyyppiId", "Viinityyppi");
-            return View();
+            return View(); // Palauttaa näkymän views/viinit/Create.
         }
 
         // POST: Viinit/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nimi,Vuosi,TyyppiId,Kommentit,Hinta")] Viinit viinit)
+        [HttpPost]  // Sallitaan pelkästään post pyyntö.
+        [ValidateAntiForgeryToken] // Tarkistetaan, että CreateGet metodin generoima token on mukana. (Tämän sovelluksen generoima).
+        public async Task<IActionResult> Create([Bind("Nimi,Vuosi,TyyppiId,Kommentit,Hinta")] Viinit viini)
         {
             
            
-                _context.Add(viinit);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _context.Add(viini); // Lisää yksittäisen viinin tietokantaan.
+                await _context.SaveChangesAsync(); // Tallettaa tietokanta muutoksen.
+                return RedirectToAction(nameof(Index)); // Käyttäjä ohjataan index näkymään. 
             
-            ViewData["TyyppiId"] = new SelectList(_context.Viinityypits, "TyyppiId", "TyyppiId", viinit.TyyppiId);
-            return View(viinit);
+            ViewData["TyyppiId"] = new SelectList(_context.Viinityypits, "TyyppiId", "TyyppiId", viini.TyyppiId);
+            return View(viini);
         }
 
         // GET: Viinit/Edit/5
