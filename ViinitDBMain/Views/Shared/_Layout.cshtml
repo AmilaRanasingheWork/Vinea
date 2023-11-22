@@ -32,7 +32,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Etusivu" asp-action="Privacy"></a>
                         </li>
-                        <form asp-action="Haku" asp-controller="Viinit">
+                        <!-- Hakukenttä toiminnallisuus -->
+                        <form asp-action="Haku" asp-controller="Viinit"> 
                         <input name="nimi" class="etusivu-hae-lomake" placeholder="Hae viiniä nimellä"/>
                         <input class="etusivu-laheta-painike" type="submit" value="Hae"/> 
                         </form>
@@ -72,11 +73,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script>
-        let viesti = "Tervetuloa viinien maailmaan"
-       document.getElementById("tervehdyskentta").innerText = viesti
-        setTimeout(() => { document.getElementById("tervehdyskentta").innerText = ""}, 4000)
-        </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -23,9 +23,12 @@ namespace ViinitDBMain.Controllers
         // Haku
         public async Task<IActionResult> Haku(string nimi)
         {
+            // Haetaan tietokannasta viinit joiden nimeen sisältyy hakusana. 
             var viinitDBContext = _context.Viinits.Where(viini => viini.Nimi.ToLower().Contains(nimi.ToLower())).
                 Include(v => v.Tyyppi);
-            return View(await viinitDBContext.ToListAsync());
+
+            // Palautetaan viinit/hakunäkymä.
+            return View(await viinitDBContext.ToListAsync()); 
         }
 
         // GET: Viinit/Details/5
