@@ -6,6 +6,8 @@ namespace ViinitDBMain.Controllers
 {
     public class HomeController : Controller
     {
+        // Testi kommentti
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
