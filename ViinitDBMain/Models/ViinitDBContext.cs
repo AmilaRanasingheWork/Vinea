@@ -10,6 +10,7 @@ namespace ViinitDBMain.Models
         public ViinitDBContext()
         {
         }
+        
 
         public ViinitDBContext(DbContextOptions<ViinitDBContext> options)
             : base(options)
@@ -27,7 +28,7 @@ namespace ViinitDBMain.Models
                 optionsBuilder.UseSqlServer("Server=AMILA\\SQLEXPRESS01;Database=ViinitDB;Trusted_Connection=True;");
             }
         }
-
+        // Testi
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Viinit>(entity =>
